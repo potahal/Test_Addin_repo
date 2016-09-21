@@ -1,0 +1,66 @@
+
+
+---
+ms.Toctitle:ContactItem.BeforeRead イベント (Outlook)(機械翻訳)
+title:ContactItem.BeforeRead イベント (Outlook)(機械翻訳)
+ms.ContentId:cebd1e59-b3a4-3c9d-5ed1-ff95c2c3d1ed
+---
+# ContactItem.BeforeRead イベント (Outlook)(機械翻訳)
+
+
+
+
+
+          UNRESOLVED_TOKEN_VAL(outlooknv1) がアイテムのプロパティの読み込みを開始する前に発生します。
+
+## 構文
+
+            UNRESOLVED_TOKEN_VAL(offexpression).**BeforeRead**
+
+
+
+
+            UNRESOLVED_TOKEN_VAL(offexpression)
+            **ContactItem** オブジェクトを表す変数。
+
+
+
+## 注釈
+**読み取り**イベントの前に、 **BeforeRead**イベントが発生します。前のプレフィックスを持つ他のイベントとは異なりは、このイベントはキャンセル可能ではありません。アイテムがメモリから読み込まれている場合を確認するのには、 **Unload**イベントを使用します。
+
+
+
+**BeforeRead**イベントは、Exchange クライアント拡張機能 (ECE) イベントの**IExchExtMessageEvents::OnRead**に対応します。
+
+
+
+**BeforeRead**イベントでは、item オブジェクトの次のメンバーのみをアクセスできます。
+
+- **Class**
+- **MessageClass**
+- **MAPIOBJECT**
+
+
+
+
+**MAPIOBJECT**プロパティは、Outlook オブジェクト モデルでは、非表示のプロパティです。このプロパティは、基になる MAPI **IMessagehttp://msdn.microsoft.com/en-us/library/cc842097(office.14).aspx**オブジェクトへのアクセスを提供し、 **http://msdn.microsoft.com/en-us/library/ms680509(VS.85).aspxのIUnknown**インターフェイスを介してのみ呼び出すことができます。プロパティは、 **IUnknown**をサポートする C または C++ などの言語で記述されたプログラムにアクセスできます。**MAPIOBJECT**は**http://msdn.microsoft.com/en-us/library/ms221608.aspxのIDispatch**インターフェイスを使用します。(VBA)、Visual C#、および Visual Basic、Visual Basic for Applications などの開発言語をサポートして、 **IDispatch**インターフェイスとしない**IUnknown**、およびそのため、 **MAPIOBJECT**にアクセスすることはできません。 他のプロパティまたはメソッドの親アイテムは、このイベントでは、Outlook はエラーを発生させます。
+
+
+
+実装者は、そのオブジェクトの基になっている**IMessage**オブジェクトおよび変更プロパティにアクセスする場合、Outlook は**IMessage**オブジェクトへの変更を反映してその項目をレンダリングします。実装側は、 **IMessage**オブジェクトが Outlook に反映する変更が発生するの**SaveChangesのhttp://msdn.microsoft.com/en-us/library/cc842181(office.14).aspx**を呼び出すことはありません。
+
+
+
+実装者は、イベント、イベントが完了する前に、 **MAPIOBJECT**プロパティから取得したオブジェクトを解放する必要があります。イベントのコンテキストの外部には、そのオブジェクトを使用しようとしていますがサポートされていないと、予期しない動作に 。
+
+
+
+## Related Topics
+
+[ContactItem オブジェクトのメンバー](a8b13369-4c87-02aa-e62a-1f3067e559fa.md)
+
+[ContactItem オブジェクト](8e32093c-a678-f1fd-3f35-c2d8994d166f.md)
+
+
+
+

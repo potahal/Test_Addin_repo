@@ -1,0 +1,40 @@
+
+
+---
+ms.Toctitle:TimelineView.StartField プロパティ (Outlook)(機械翻訳)
+title:TimelineView.StartField プロパティ (Outlook)(機械翻訳)
+ms.ContentId:2477ce1d-a5d0-ddf5-49e9-b25dcd90efbd
+---
+# TimelineView.StartField プロパティ (Outlook)(機械翻訳)
+
+
+
+
+**TimelineView**オブジェクト内に表示される Outlook アイテムの期間を開始するプロパティの名前を表す**文字列**値を設定を取得または取得します。読み取り/書き込み。
+
+## 構文
+
+            UNRESOLVED_TOKEN_VAL(offexpression).**StartField**
+
+
+
+
+            UNRESOLVED_TOKEN_VAL(offexpression)
+            **TimelineView** オブジェクトを表す変数を指定します。
+
+
+
+## 注釈
+**ストア**および**プロバイダー**のプロパティの値は、Outlook アイテムの期間を表す**TimelineView**オブジェクトを使用する Outlook アイテムのプロパティを示します。カスタムおよび組み込みプロパティの両方を指定することができますが、日付/時刻プロパティだけが許可されます。
+
+
+
+## Related Topics
+
+[TimelineView オブジェクト](fb14c1a1-f542-fa1e-f30f-c5ee3d2f0206.md)
+
+[TimelineView オブジェクトのメンバー](fa134129-519f-6f08-dc53-5e72085f9cc0.md)
+
+
+
+
