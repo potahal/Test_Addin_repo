@@ -1,0 +1,21 @@
+
+# EngagementComment.Guid プロパティ (プロジェクト)
+
+EngagementComment オブジェクトの Guid プロパティ。 Office 2016 に導入されました。
+
+
+## 構文
+
+ _式_. **Guid**
+
+ _式_ **EngagementComment**オブジェクトを表す変数です。
+
+
+## 関連項目
+
+
+#### その他の技術情報
+
+
+[EngagementComment オブジェクト (プロジェクト)](4ca86b23-f8a2-0939-3cc5-196e72d06f01.md)
+[EngagementComment メンバー (プロジェクト)](http://msdn.microsoft.com/library/739c0d51-7f6a-90d6-5160-c8634c6dffe3%28Office.15%29.aspx)
