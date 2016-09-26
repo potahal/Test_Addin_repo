@@ -1,0 +1,32 @@
+
+# Task.HyperlinkAddress Property (Project)
+
+Ruft den URL- oder UNC-Pfad eines Dokuments ab oder legt diesen fest.  **String** -Wert mit Lese-/Schreibzugriff.
+
+
+## Syntax
+
+ _Ausdruck_. **HyperlinkAddress**
+
+ _Ausdruck_ Eine Variable, die ein **Task** -Objekt darstellt.
+
+
+## Beispiel
+
+Im folgenden Beispiel wird allen Vorgängen des aktiven Projekts, einschließlich der Vorgänge von Teilprojekten, ein Hyperlink hinzugefügt.
+
+
+```
+Sub AddHyperlink() 
+ Dim T As Task 
+ 
+ For Each T In ActiveProject.Tasks 
+ If Not (T Is Nothing) Then 
+ T.Hyperlink = "Microsoft" 
+ T.HyperlinkAddress = "http://www.microsoft.com/" 
+ End If 
+ Next T 
+ 
+End Su
+```
+

@@ -1,0 +1,24 @@
+
+# SmartArtColors.Parent-Eigenschaft (Office)
+
+Gibt das aufrufende Objekt zurück. Schreibgeschützt.
+
+
+## Syntax
+
+ _Ausdruck_. **Parent**
+
+ _Ausdruck_ Ein Ausdruck, der ein **SmartArtColors** -Objekt zurückgibt.
+
+
+## Siehe auch
+
+
+#### Konzepte
+
+
+[SmartArtColors-Objekt](a1929517-b1fb-c6fe-b6db-03f7ef1ef894.md)
+#### Weitere Ressourcen
+
+
+[Elemente des SmartArtColors-Objekts](http://msdn.microsoft.com/library/c371e814-7621-2c01-c0fe-93003892646f%28Office.15%29.aspx)

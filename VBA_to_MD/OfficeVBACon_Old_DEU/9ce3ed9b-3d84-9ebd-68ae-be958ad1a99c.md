@@ -1,0 +1,53 @@
+
+# OfficeDataSourceObject.ApplyFilter-Methode (Office)
+
+Wendet einen Filter auf eine Seriendruckdatenquelle an, um die Datensätze auszufiltern, die den angegebenen Kriterien entsprechen.
+
+
+## Syntax
+
+ _Ausdruck_. **ApplyFilter**
+
+ _Ausdruck_ Eine Variable, die ein **OfficeDataSourceObject** -Objekt darstellt.
+
+
+## Beispiel
+
+In diesem Beispiel wird ein neuer Filter hinzugefügt, der alle Datensätze entfernt, in denen das Feld  **Region** leer ist. Anschließend wird der Filter auf die aktive Publikation angewendet.
+
+
+```
+Sub OfficeFilters() 
+ Dim appOffice As OfficeDataSourceObject 
+ Dim appFilters As ODSOFilters 
+ 
+ Set appOffice = Application.OfficeDataSourceObject 
+ 
+ appOffice.Open bstrConnect:="DRIVER=SQL Server;SERVER=ServerName;" &amp; _ 
+ "UID=user;PWD=;DATABASE=Northwind", bstrTable:="Employees" 
+ 
+ Set appFilters = appOffice.Filters 
+ 
+ MsgBox appOffice.RowCount 
+ 
+ appFilters.Add Column:="Region", Comparison:=msoFilterComparisonEqual, _ 
+ Conjunction:=msoFilterConjunctionAnd, bstrCompareTo:="WA" 
+ appOffice.ApplyFilter 
+ 
+ MsgBox appOffice.RowCount 
+ 
+End Sub
+```
+
+
+## Siehe auch
+
+
+#### Konzepte
+
+
+[OfficeDataSourceObject-Objekt](d5e5401b-643e-c12c-2648-f281af481f45.md)
+#### Weitere Ressourcen
+
+
+[Elemente des OfficeDataSourceObject-Objekts](http://msdn.microsoft.com/library/57ba0dc6-80e7-04a9-a619-2a3e6aa2cdff%28Office.15%29.aspx)
